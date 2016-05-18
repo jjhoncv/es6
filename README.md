@@ -10,6 +10,8 @@ For run project:
 
 * npm start
 
-Render method:
+Properties:
 
-To write more lines of HTML to render it necessary to use brackets in return.
+* Especific type properties App.propTypes
+* Default properties to use App.defaultProps
+* If the properties are then required to render should be
