@@ -11,5 +11,5 @@ For run project:
 
 States:
 
-* Renders 4 Widget components where each of them share the same propieades and events.
-* Any change in one is reflected in the other.
+* Access to components through referencies (refs).
+* En el caso de slider con ref="red", en cada update del componente, busca su referencia actual mediante "this.refs.red", y para acceder al input slider de el, lo hace "this.refs.red.inp"
