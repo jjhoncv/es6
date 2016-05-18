@@ -9,3 +9,7 @@ For install dependencies necesaries:
 For run project:
 
 * npm start
+
+Render method:
+
+To write more lines of HTML to render it necessary to use brackets in return.
