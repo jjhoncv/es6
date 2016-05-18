@@ -10,8 +10,7 @@ For run project:
 
 * npm start
 
-Properties:
+States:
 
-* Especific type properties App.propTypes
-* Default properties to use App.defaultProps
-* If the properties are then required to render should be
+* You can predefine a state in the constructor
+* Too can update state. 

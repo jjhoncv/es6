@@ -2,20 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
-	
-	render(){
-		let txt = this.props.txt
-		return <h1>{txt}</h1>
+	constructor(){
+		super();
+		this.state = {
+			txt : "this is the state txt",
+			cat : 0
+		}
 	}
-}
 
-App.propTypes = {
-	txt : React.PropTypes.string,
-	cat : React.PropTypes.number.isRequired
-}
+	update(e){
+		this.setState({txt: e.target.value})
+	}
 
-App.defaultProps = {
-	txt : 'this is the default txt'
+	render(){
+		return(
+			<div>
+				<input type="text" onChange={this.update.bind(this)} />
+				<h1>{this.state.txt}</h1>
+			</div>
+		);
+	}
 }
 
 ReactDOM.render(
