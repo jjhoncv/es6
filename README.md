@@ -13,6 +13,6 @@ For install bower:
 
 * npm install bower
 
-Accesing child properties:
+Mounting components
 
-* this.props.children access to properties of the component
+* Mounting or unMounting of components 
