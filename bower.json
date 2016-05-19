@@ -1,0 +1,17 @@
+{
+  "name": "es6-react-setup",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Jhonnatan Castro <jhonnatan.castro@orbis.com.pe>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jjhoncv/react-deep",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

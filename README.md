@@ -9,7 +9,10 @@ For run project:
 
 * npm start
 
-States:
+For install bower:
 
-* Access to components through referencies (refs).
-* En el caso de slider con ref="red", en cada update del componente, busca su referencia actual mediante "this.refs.red", y para acceder al input slider de el, lo hace "this.refs.red.inp"
+* npm install bower
+
+Accesing child properties:
+
+* this.props.children access to properties of the component
