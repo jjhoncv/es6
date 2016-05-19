@@ -15,4 +15,4 @@ For install bower:
 
 Mounting components
 
-* Mounting or unMounting of components 
+* Mounting or unMounting of components and accessing to states 
