@@ -1,8 +1,8 @@
-import App from './App';
+import List from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-	<App/>,
+	<List/>,
 	document.getElementById('app')
 );
