@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class FrmAdd extends React.Component {
+class FrmEdit extends React.Component {
 	constructor(){
-		super();		
+		super();
+		this.state = {}
+		this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleClick(e){
@@ -11,12 +13,15 @@ class FrmAdd extends React.Component {
 		//this.setState({action:"edit"})
 	}
 
-	render(){		
-		/*var articles = this.renderArticles(this.props.data);*/
+	onSubmit(){
+
+	}
+
+	render(){				
 		return(
 			<div className="row">
-				<h4>Add Person</h4>
-				<form>
+				<h4>Edit Person</h4>
+				<form onSubmit={this.onSubmit}>
 					<div className="form-group">
 						<label for="firstName">First Name</label>
 						<input type="text" className="form-control" id="firstName" placeholder="First Name"/>
@@ -36,12 +41,4 @@ class FrmAdd extends React.Component {
 	}
 }
 
-const Article = ({article}) => {
-	return(
-		<li key={article.id}>
-			<p>{article.name}</p>
-		</li>
-	)
-}
-
-export default FrmAdd
+export default FrmEdit

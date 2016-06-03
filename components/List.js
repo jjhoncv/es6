@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Articles extends React.Component {
+class List extends React.Component {
 	constructor(){
 		super();		
 	}
@@ -41,4 +41,4 @@ const Article = ({article}) => {
 	)
 }
 
-export default Articles
+export default List

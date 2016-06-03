@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Articles from './components/Articles';
+import List from './components/List';
 import FrmAdd from './components/FrmAdd';
 
-class List extends React.Component {
+class Data extends React.Component {
 	constructor(){
 		super();
 		this.url = "http://www.json-generator.com/api/json/get/bGEnWJASsy?indent=2";
@@ -22,13 +22,11 @@ class List extends React.Component {
 	}
 
 	render(){
-		return(
-			<section>
-				<FrmAdd/>
-				<Articles data={this.state.data}/>
-			</section>
+		return(			
+			<FrmAdd/>
+			<List data={this.state.data}/>			
 		)
 	}
 }
 
-export default List
+export default Data
