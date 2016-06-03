@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Articles from './components/Articles'
+import Articles from './components/Articles';
+import FrmAdd from './components/FrmAdd';
 
 class List extends React.Component {
 	constructor(){
@@ -23,6 +24,7 @@ class List extends React.Component {
 	render(){
 		return(
 			<section>
+				<FrmAdd/>
 				<Articles data={this.state.data}/>
 			</section>
 		)

@@ -17,18 +17,27 @@ class Articles extends React.Component {
 	render(){		
 		var articles = this.renderArticles(this.props.data);
 		return(
-			<ul>
-				{articles}
-			</ul>
+			<div className="row">
+				<h4>List Persons</h4>
+				<table className="table table-striped">
+					<thead><tr><th>#</th><th>First Name</th><th>Last Name</th><th>Email Address</th></tr></thead>
+					<tbody>
+						{articles}
+					</tbody>
+				</table>
+			</div>
 		)
 	}
 }
 
 const Article = ({article}) => {
 	return(
-		<li key={article.id}>
-			<p>{article.name}</p>
-		</li>
+		<tr>
+			<th>{article.id}</th>
+			<td>{article.name}</td>
+			<td>{article.name}</td>
+			<td>{article.name}</td>
+		</tr>
 	)
 }
 

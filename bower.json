@@ -3,7 +3,7 @@
   "description": "",
   "main": "index.js",
   "authors": [
-    "Jhonnatan Castro <jhonnatan.castro@orbis.com.pe>"
+    "Jhonnatan Castro <jjhoncv@gmail.com>"
   ],
   "license": "ISC",
   "homepage": "https://github.com/jjhoncv/react-deep",
@@ -13,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
+  }
 }
