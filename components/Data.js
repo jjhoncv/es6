@@ -1,30 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import List from './components/List';
-import FrmAdd from './components/FrmAdd';
+import List from './List';
+import FrmAdd from './FrmAdd';
+
+import data from "./../store/data.json";
+import Article from "./../models/Article";
 
 class Data extends React.Component {
-	constructor(){
-		super();
-		this.url = "http://www.json-generator.com/api/json/get/bGEnWJASsy?indent=2";
-		this.state = {data: []};
+	constructor(props){
+		super(props);		
+		this.state = {data: data, message:"", type:""};
 	}
 	
-  componentDidMount() {
-		this.loadAjax();
+	handleEventAdd(thisFormAdd, event){
+		event.preventDefault();		
+
+		new Article({
+			firstName: thisFormAdd.refs.firstName.value, 
+			lastName : thisFormAdd.refs.lastName.value, 
+			emailAddress: thisFormAdd.refs.emailAddress.value
+		});
+		
+		this.setState({message: 'Sending...', type:"info"});
 	}
 
-	loadAjax(){		
-		fetch(this.url).then((response) => response.json()).then((persons) => {
-			this.setState({data: persons});
-		})
+	componentWillUpdate(){
+		console.log("Update MyComponent...")
 	}
 
 	render(){
+		if (this.state.type && this.state.message){
+			var status = <p className={'bg-' + this.state.type}>
+										{this.state.message}
+									 </p>
+		}
 		return(			
-			<FrmAdd/>
-			<List data={this.state.data}/>			
+			<div>
+				{status}
+				<FrmAdd EventAdd={this.handleEventAdd.bind(this)}/>
+				<List data={this.state.data}/>			
+			</div>
 		)
 	}
 }

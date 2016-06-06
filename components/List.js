@@ -35,8 +35,8 @@ const Article = ({article}) => {
 		<tr>
 			<th>{article.id}</th>
 			<td>{article.name}</td>
-			<td>{article.name}</td>
-			<td>{article.name}</td>
+			<td>{article.lastname}</td>
+			<td>{article.email}</td>
 		</tr>
 	)
 }
