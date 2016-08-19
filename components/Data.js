@@ -29,6 +29,10 @@ class Data extends React.Component {
 		console.log("Update MyComponent...")
 	}
 
+	componentDidUpdate(){
+		console.log("did update");
+	}
+
 	render(){
 		if (this.state.type && this.state.message){
 			var status = <p className={'bg-' + this.state.type}>

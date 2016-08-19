@@ -1,10 +1,10 @@
 import data from "./../store/data.json";
 import Articles from "./Articles";
-import fs from 'fs';
+import fs from 'browserify-fs';
 
 class Article {
 	constructor(article) {
-		this.urlFile = "./../store/data.json";
+		this.urlFile = "store/data.json";
 		this.articles = data;
 		this.firstName = article.firstName;
 		this.lastName = article.lastName;
@@ -23,11 +23,11 @@ class Article {
 	}
 
 	save(){
-		console.log(fs);		
-		/*fs.writeFile(this.urlFile, "a", function (err) {
+		//console.log(fs);
+		fs.writeFile(this.urlFile, "a", function (err) {
 			if (err) return console.log(err);
 			console.log('update file');
-		});		*/
+		});
 	}
 }
 
